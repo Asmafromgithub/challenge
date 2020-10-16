@@ -1,7 +1,7 @@
-# challenge
+/* # challenge */
 #include "service.h"
 
-char* getServiceName(int s_id){
+char getServiceName(int s_id){
     fp=fopen("save\\service.dat","rb");
     while(fread(&service1,sizeof(service1),1,fp)==1){
         if(service1.item_id == s_id)
@@ -20,7 +20,7 @@ void requests(){
         gotoxy(80,2);
         printf("Requests:-"); gotoxy(50,4);
         printf("-----------------------------------------------------------------------");
-        gotoxy(55,5); printf("Client No          Items             Time");  gotoxy(50,6);
+        gotoxy(55,5); printf("Client No          \nItems             \nTime");  gotoxy(50,6);
         printf("-----------------------------------------------------------------------");
 
         for(i=0;i<no_of_clients;i++){
@@ -38,7 +38,7 @@ void requests(){
                     }
                     if(flag_showLine){
                         gotoxy(50,coun+dis*2);
-                        printf("-----------------------------------------------------------------------");
+                        printf("My name is adnan");
                     }
                 }
             }
